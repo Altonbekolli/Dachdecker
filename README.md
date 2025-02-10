@@ -1,9 +1,13 @@
-🏠 **Dachdecker Project**
+# 🏠 **Dachdecker Project**
+
+---
 
 Welcome to the **Dachdecker** project! 🚀
 This is a custom website designed for a roofing company: B. Mazreku & H. Bajraktari GbR.
 
-📋 **Project Overview**
+---
+
+## 📋 **Project Overview**
 
 This website showcases:
 
