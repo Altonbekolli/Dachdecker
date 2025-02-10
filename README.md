@@ -11,40 +11,40 @@ This is a custom website designed for a roofing company: B. Mazreku & H. Bajrakt
 
 This website showcases:
 
-✅ Services offered by the company
-✅ Completed projects with images 📸
-✅ Contact information and legal details 📞
+✅ Services offered by the company  
+✅ Completed projects with images 📸  
+✅ Contact information and legal details 📞  
 
 ---
 
 ## **🛠️ Tech Stack**
 The project is built using the following technologies:
 
-HTML5 🌐
-CSS3 🎨
-JavaScript ⚙️
+HTML5 🌐  
+CSS3 🎨  
+JavaScript ⚙️  
 
 ---
 
 ## 📁 **Project Structure**
 
-Here is a visual overview of the project structure:  
+Here is a visual overview of the project structure:    
 ![Project Structure](assets/images/structure.png)
 
 ---
 
 ## ✨ **Features**
 
-📷 Project Gallery: A carousel-like display of past projects
-📄 About Us Section: Information about the company and services
-📞 Contact Section: Easy access to the company's contact details
-🎨 Responsive Design: Looks great on both desktop and mobile devices
+📷 Project Gallery: A carousel-like display of past projects  
+📄 About Us Section: Information about the company and services  
+📞 Contact Section: Easy access to the company's contact details  
+🎨 Responsive Design: Looks great on both desktop and mobile devices  
 
 ---
 
 ## 🚀 **How to Run**
 
-Clone this repository to your local machine:
+Clone this repository to your local machine:  
 git clone https://github.com/Altonbekolli/Dachdecker.git
 
 ---
@@ -60,7 +60,7 @@ Here is a preview of the homepage:
 
 ## 💬 **Contact Information**
 
-For any inquiries, please contact:
+For any inquiries, please contact:  
 
-📧 Email: Altonbekolli_1@web.de
+📧 Email: Altonbekolli_1@web.de  
 🌐 Website: Coming soon!
