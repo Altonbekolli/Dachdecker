@@ -4,39 +4,34 @@
     margin: 0;
     padding: 0;
 }
-.dachdecker__hamburger{
-display:none;
-}
 
+/* --- Header --- */
 .dachdecker__header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 10;
     background-color: #333;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 1em 0;
-}
-.dachdecker__header-content {
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.dachdecker__header-left {
+.dachdecker__header-content {
+    width: 95%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-
+.dachdecker__header-left{
+    display:flex;
+}
 .dachdecker__logo {
-    max-width: 8%;
-    margin-right: 15px;
-    padding-left:11px
-}
-nav{
-padding-right:11px
+    max-width: 60px;
 }
 
 .dachdecker__nav-list {
@@ -53,15 +48,17 @@ padding-right:11px
     font-weight: bold;
     cursor: pointer;
 }
-.dachdecker__nav-item:hover{
-    color:red;
-    text-decoration:underline;
+
+.dachdecker__nav-item:hover {
+    color: red;
+    text-decoration: underline;
 }
 
+/* --- Hauptinhalt --- */
 .dachdecker__main {
-    padding-top:80px;
-    padding-left:2rem;
-    padding-right:2rem;
+    padding-top: 80px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .dachdecker__section {
@@ -69,21 +66,127 @@ padding-right:11px
 }
 
 .dachdecker__section--home {
-    display:block;
-    margin:-64px -2rem 0 -2rem;
+    display: block;
+    margin: -64px -2rem 0 -2rem;
 }
 
-.dachdecker__about-content {
+/* --- Banner-Bereich --- */
+.dachdecker__block-banner {
+    width: 100%;
+    height:auto;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    gap: 20px;
     align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
 }
 
-.dachdecker__about-image {
-    max-width: 200px;
+.dachdecker__background {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 50%;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.8), rgba(0, 153, 153, 0.8));  /* Dunkelblau zu Türkis-Verlauf */
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Sanfter Schatten */
+}
+
+
+/* --- Dynamischer Bereich & Karussell --- */
+.dachdecker__dynamic {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.dachdecker__carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.dachdecker__block {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f9f9f9;
     border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.dachdecker__block-image {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.dachdecker__block-text {
+    font-size: 1em;
+    color: #333;
+}
+
+.dachdecker__block--visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.dachdecker__hamburger {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.dachdecker__hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.dachdecker__hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.dachdecker__hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.dachdecker__hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* Animation für das "X" */
+.dachdecker__hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.dachdecker__hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.dachdecker__hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+/* --- Footer --- */
 .dachdecker__footer {
     display: flex;
     justify-content: space-between;
@@ -91,15 +194,6 @@ padding-right:11px
     padding: 1em;
     background-color: #333;
     color: white;
-}
-
-.dachdecker__footer-left {
-    flex: 1;
-    text-align: left;
-}
-
-.dachdecker__footer-right {
-    text-align: right;
 }
 
 .dachdecker__footer-link {
@@ -111,58 +205,13 @@ padding-right:11px
 
 .dachdecker__footer-link:hover {
     text-decoration: underline;
-    color:red;
-}
-.dachdecker__footer-text {
-    margin: 0 0 0 auto;
-}
-.dachdecker__section--home,
-.dachdecker__section--about,
-.dachdecker__section--services,
-.dachdecker__section--projects,
-.dachdecker__section--contact {
-    padding: 3em 0;
+    color: red;
 }
 
-.dachdecker__block-banner{
-    position: relative;
-    background-image: url('banner.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-.dachdecker__background {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    width: 50%;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    border-radius: 10px;
-    z-index: 2;
-    transition: all 0.3s ease;
-}
-
-@keyframes colorShift {
-    0% {
-        background: linear-gradient(135deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
-    }
-    100% {
-        background: linear-gradient(135deg, rgba(0, 204, 255, 0.5), rgba(255, 0, 150, 0.5));
-    }
-}
-
-
-/*Überschriften*/
-h1{
-font-size:16px;
+/* --- Überschriften --- */
+h1 {
+    font-size: 16px;
+    margin-top:20px;
 }
 .dachdecker__section h2 {
             font-size: 2rem;
@@ -173,186 +222,79 @@ font-size:16px;
             padding: 20px;
             border-radius: 8px;
 }
-.dachdecker__section h3 {
-            margin-top:3rem;
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-            margin-bottom: 0;
-            border-radius: 8px;
+h3 {
+    margin-top: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0;
+    border-radius: 8px;
 }
+
 .dachdecker__about-text {
     color: #666;
 }
-.dachdecker__block-text {
-    font-size: 1em;
-    color: #333;
-}
 
-/* Dynamischer Grid-Bereich */
-.dachdecker__dynamic {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding:0;
-}
-
-.dachdecker__block {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    background-color: #f9f9f9;
-    padding: 1em;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.dachdecker__block-image {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-
-
-/* Sichtbare Klasse für das Einblenden */
-.dachdecker__block--visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Animation für das Menü-Icon bei Klick */
-.dachdecker__hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.dachdecker__hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.dachdecker__hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-/* Animiertes Hamburger-Menü-Icon */
-.dachdecker__hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: white;
-    transition: 0.4s;
-}
-
-
-/*tablet ansicht*/
+/* --- Responsive Anpassungen --- */
 @media (max-width: 1200px) {
-  .dachdecker__background {
-        top: 30%;
-        left: 0%;
-        width: 50%;
-        font-size: 1.2rem;
+    .dachdecker__background {
+        width: 60%;
+        font-size: 1.5rem;
         padding: 8px 16px;
     }
 }
 
-
-
-/* Allgemeine Stile für die mobile Ansicht */
 @media (max-width: 768px) {
-    /* Header-Anpassungen */
+
     .dachdecker__header-content {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1em;
     }
 
-    .dachdecker__header-left {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
+    .dachdecker__logo {
+        max-width: 50px;
     }
 
-    /* Hamburger-Menü */
-    .dachdecker__nav-list {
-        display: none; /* Versteckt das Menü standardmäßig auf kleinen Bildschirmen */
-        flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        width: 100%;
-        padding: 1em;
-    }
+      .dachdecker__hamburger {
+            display: block;
+        }
+
+        .dachdecker__nav-list {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #333;
+            width: 100%;
+            padding: 1em;
+        }
+
+        .dachdecker__nav-list.active {
+            display: flex;
+        }
 
     .dachdecker__nav-item {
         padding: 10px;
         text-align: left;
         color: #fff;
     }
-
-    .dachdecker__hamburger {
-        cursor: pointer;
-        display: block;
-        color: white;
-        font-size: 1.5em;
-    }
-
-    /*  Menü anzeigen, wenn aktiv  */
-    .dachdecker__nav-list.active {
-        display: flex;
-    }
-
-    /* Hauptbereich und Sektionen */
-    .dachdecker__main {
-        padding: 70px 1rem;
-    }
-
-    .dachdecker__about-content {
-        flex-direction: column;
-    }
-
-    .dachdecker__about-image {
-        max-width: 100%;
-    }
-    .dachdecker__block-image:nth-child(1) {
-            margin-top:0px;
-        }
-
-    /* Dynamischer Bereich */
     .dachdecker__dynamic {
-        grid-template-columns: 1fr; /* Einspaltiges Layout */
+        grid-template-columns: 1fr;
     }
 
-    /* Footer-Anpassungen */
     .dachdecker__footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .dachdecker__footer-left, .dachdecker__footer-right {
-        text-align: center;
-    }
-
-  .dachdecker__background {
-        top: 30%;
-        left: 0%;
-        width: 50%;
-        font-size: 1.5rem;
+    .dachdecker__background {
+        width: 80%;
+        font-size: 1.2rem;
         padding: 5px 10px;
     }
-           .dachdecker__section h2 {
-               font-size: 2rem;
-               padding: 10px;
 
-           }
-         .dachdecker__section h3 {
-            padding-top:1rem;
-         }
+    .dachdecker__section h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
 }
-
-
-
-
-
-
