@@ -1,39 +1,60 @@
-// Blöcke beim Scrollen einblenden
-function revealBlocks() {
-    const blocks = document.querySelectorAll('.dachdecker__block');
-    const revealPoint = 250;
+let currentIndex = 0;
 
-    blocks.forEach(block => {
-        const blockTop = block.getBoundingClientRect().top;
-        if (blockTop < window.innerHeight - revealPoint) {
-            block.classList.add('dachdecker__block--visible');
-        }
-    });
+// Funktion für die Karussell-Animation
+function slideCarousel() {
+    const carousel = document.querySelector('.dachdecker__carousel');
+    const blocks = document.querySelectorAll('.dachdecker__block');
+
+    if (!carousel || blocks.length === 0) return;
+
+    const firstBlock = blocks[0];
+    carousel.appendChild(firstBlock);
+
+    carousel.style.transition = 'none';
+    carousel.style.transform = 'translateX(0)';
+
+    setTimeout(() => {
+        carousel.style.transition = 'transform 0.5s ease';
+        carousel.style.transform = 'translateX(-20%)';
+    }, 100);
 }
 
-// Event Listener für das Scrollen
-window.addEventListener('scroll', revealBlocks);
+setInterval(slideCarousel, 2000);
 
+
+
+window.addEventListener('scroll', revealBlocks);
 revealBlocks();
 
-//Anzeigen der verschiedenen Sektionen
 function showSection(sectionId) {
-    // Alle anderen Sektionen verstecken
     document.querySelectorAll('.dachdecker__section').forEach(section => {
         section.style.display = 'none';
     });
 
-    // Die ausgewählte Sektion anzeigen
     const section = document.getElementById(sectionId);
-    section.style.display = 'block';
+    if (section) {
+        section.style.display = 'block';
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
 
-    section.scrollIntoView({ behavior: 'smooth' });
+    // Menü schließen
+    const navList = document.querySelector('.dachdecker__nav-list');
+    const hamburger = document.querySelector('.dachdecker__hamburger');
+    navList.classList.remove('active');
+    hamburger.classList.remove('active');
 }
 
-// Hamburger-Menü
+// Hamburger-Menü toggeln
 function toggleMenu() {
     const navList = document.querySelector('.dachdecker__nav-list');
     const hamburger = document.querySelector('.dachdecker__hamburger');
     navList.classList.toggle('active');
     hamburger.classList.toggle('active');
 }
+
+document.querySelectorAll('.dachdecker__nav-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = item.getAttribute('href').substring(1);
+    });
+});
