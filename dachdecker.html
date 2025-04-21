@@ -6,7 +6,6 @@
     <title>Testseite</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <script src="js/script.js"></script>
 </head>
 <body class="dachdecker">
 <header class="dachdecker__header">
@@ -123,13 +122,13 @@
 <!-- Footer grauer Block-->
 <footer class="dachdecker__footer">
     <div class="dachdecker__footer-left">
-        <p>© 2024 Dachdecker Hajredin | Alle Rechte vorbehalten</p>
+        <p>© <span id="jahr"></span> Dachdecker Hajredin | Alle Rechte vorbehalten</p>
     </div>
     <div class="dachdecker__footer-right">
         <span class="dachdecker__footer-link" onclick="showSection('impressum')">Impressum</span>
         <span class="dachdecker__footer-link" onclick="showSection('datenschutz')">Datenschutzerklärung</span>
     </div>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
