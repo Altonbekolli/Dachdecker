@@ -23,8 +23,8 @@
             <ul class="dachdecker__nav-list">
                 <li><a href="#home" class="dachdecker__nav-item" onclick="showSection('home')">Home</a></li>
                 <li><a href="#about" class="dachdecker__nav-item" onclick="showSection('about')">Über uns</a></li>
-                <li><a href="#services" class="dachdecker__nav-item" onclick="showSection('services')">Leistungen</a></li>
-                <li><a href="#projects" class="dachdecker__nav-item" onclick="showSection('projects')">Projekte</a></li>
+                <li><a href="#services" class="dachdecker__nav-item" onclick="showSection('services')">Projekte</a></li>
+                <li><a href="#projects" class="dachdecker__nav-item" onclick="showSection('projects')">Stellenausschreibung</a></li>
                 <li><a href="#contact" class="dachdecker__nav-item" onclick="showSection('contact')">Kontakt</a></li>
             </ul>
         </nav>
@@ -36,13 +36,65 @@
     <section id="home" class="dachdecker__section dachdecker__section--home">
         <!-- banner+überschrift -->
         <div class="dachdecker__background">
-            <h2>Aus Leidenschaft-dem Himmel so nah</h2>
+            <h2>Aus Leidenschaft – dem Himmel so nah</h2>
         </div>
         <div class="dachdecker__banner">
-            <img src="assets/images/banner.jpg" alt="bannerHome" class="dachdecker__block-banner">
+            <img src="assets/images/banner.jpg" alt="Banner Home" class="dachdecker__block-banner">
+        </div>
+    
+        <!-- Begrüßung -->
+        <div class="dachdecker__welcome container">
+            <h3>Willkommen bei B. Mazreku & H. Bajraktari GbR</h3>
+            <p>
+                Schön, dass Sie den Weg zu uns gefunden haben. Wir stehen für ehrliches Handwerk, Leidenschaft fürs Dach und zuverlässige Arbeit – seit vielen Jahren.
+            </p>
+            <p>
+                Ob Sanierung, Neubau oder Speziallösungen – wir begleiten Ihr Projekt vom ersten Kontakt bis zur letzten Dachpfanne. 
+                Werfen Sie einen Blick auf unsere Leistungen und überzeugen Sie sich selbst von unserer Arbeit!
+            </p>
+            <a href="#services" class="dachdecker__btn" onclick="showSection('services')">Zu unseren Projekten</a>
         </div>
 
+        <!-- Leistungen-Teaser auf der Startseite -->
+        <section class="leistungen-teaser">
+            <div class="dachdecker__container">
+                <h3>Unsere Leistungen im Überblick</h3>
+                <p class="leistungen-subtext">Wir stehen für Qualität auf jedem Dach. Erfahren Sie mehr über unsere Leistungen:</p>
+      
+             <div class="leistungen-grid">
+                <a href="#services" class="leistung-box leistung1">Dachdeckerarbeiten</a>
+                <a href="#services" class="leistung-box leistung2">Abdichtungen</a>
+                <a href="#services" class="leistung-box leistung3">Gründächer</a>
+                <a href="#services" class="leistung-box leistung4">Dämmungen</a>
+                <a href="#services" class="leistung-box leistung5">Holzbau</a>
+                <a href="#services" class="leistung-box leistung6">Spenglerarbeiten</a>
+            </div>
+        </div>
+  </section>
+</section>
+    
+    <!-- über uns -->
+    <section id="about" class="dachdecker__section">
+        <div class="dachdecker__container">
+        <h3>Über uns</h3>
+        <div class="dachdecker__about-content">
+            <p class="dachdecker__text">
+                Sehr geehrte Damen und Herren,<br>
+                wir, die Firma B. Mazreku & H. Bajraktari GbR, sind an einer Zusammenarbeit mit Ihrem Unternehmen interessiert. Wir verfügen über umfassende Erfahrung in den Bereichen Grunddämmung, Gefälledämmung, Gießen, Dämmsperre, Grünschiefer und Flüssigkunststoff.
+                Ein Beispiel unserer Arbeiten ist ein Projekt in der Franz-Mader-Straße, bei dem wir die komplette Tiefgarage mit Foamglas versehen und alle Abdichtungs- sowie Dämmarbeiten selbst durchgeführt haben.
+                Um Ihnen einen besseren Eindruck von unseren Fähigkeiten und unserer Arbeitsqualität zu geben, haben wir einige Referenzprojekte beigefügt.
+                Falls Ihrerseits Interesse an einer Kooperation besteht, stehen wir Ihnen gern für ein persönliches Gespräch zur Verfügung, um Details und Möglichkeiten zu besprechen.
+                Mit freundlichen Grüßen,
+                B. Mazreku & H. Bajraktari GbR</p>
+        </div>
+        </div>
+    </section>
 
+    <!-- Leistung-->
+    <section id="services" class="dachdecker__section">
+        <div class="dachdecker__container">
+        <h3>Leistungen</h3>
+        <p class="dachdecker__text">Hier sind unsere angebotenen Leistungen im Bereich Dachdeckerei.</p>
         <section id="dynamic-content" class="dachdecker__dynamic">
             <div class="dachdecker__carousel">
                 <div class="dachdecker__block">
@@ -71,51 +123,101 @@
                 </div>
             </div>
         </section>
-    </section>
-
-    <!-- über uns -->
-    <section id="about" class="dachdecker__section">
-        <h3>Über uns</h3>
-        <div class="dachdecker__about-content">
-            <p class="dachdecker__about-text">
-                Sehr geehrte Damen und Herren,<br>
-                wir, die Firma B. Mazreku & H. Bajraktari GbR, sind an einer Zusammenarbeit mit Ihrem Unternehmen interessiert. Wir verfügen über umfassende Erfahrung in den Bereichen Grunddämmung, Gefälledämmung, Gießen, Dämmsperre, Grünschiefer und Flüssigkunststoff.
-                Ein Beispiel unserer Arbeiten ist ein Projekt in der Franz-Mader-Straße, bei dem wir die komplette Tiefgarage mit Foamglas versehen und alle Abdichtungs- sowie Dämmarbeiten selbst durchgeführt haben.
-                Um Ihnen einen besseren Eindruck von unseren Fähigkeiten und unserer Arbeitsqualität zu geben, haben wir einige Referenzprojekte beigefügt.
-                Falls Ihrerseits Interesse an einer Kooperation besteht, stehen wir Ihnen gern für ein persönliches Gespräch zur Verfügung, um Details und Möglichkeiten zu besprechen.
-                Mit freundlichen Grüßen,
-                B. Mazreku & H. Bajraktari GbR</p>
         </div>
     </section>
 
-    <!-- Leistung-->
-    <section id="services" class="dachdecker__section">
-        <h3>Leistungen</h3>
-        <p>Hier sind unsere angebotenen Leistungen im Bereich Dachdeckerei.</p>
-    </section>
-
     <!-- Projekte-->
-    <section id="projects" class="dachdecker__section">
-        <h3>Projekte</h3>
-        <p>Werfen Sie einen Blick auf einige unserer erfolgreich abgeschlossenen Projekte.</p>
-    </section>
-
+    <section id="projects" class="dachdecker__section stellen-section">
+        <div class="dachdecker__container">
+        <h3>Stellenausschreibungen</h3>
+        <p class="stellen-subtitle">Werde Teil unseres Teams, wir freuen uns auf deine Bewerbung!</p>
+        
+        <div class="stellen-grid-modern">
+          <a href="stellen/stelle1.html" class="stellen-card">
+            <div class="stellen-card-inner">
+              <div class="stellen-card-front">
+                <h4>Dachdecker:in (Vollzeit)</h4>
+                <p>Für unsere spannenden Bauprojekte suchen wir motivierte Dachdecker:innen.</p>
+              </div>
+              <div class="stellen-card-back">
+                <p><strong>Mehr Infos</strong></p>
+                <p>Klick hier →</p>
+              </div>
+            </div>
+          </a>
+      
+          <a href="stellen/stelle2.html" class="stellen-card">
+            <div class="stellen-card-inner">
+              <div class="stellen-card-front">
+                <h4>Bauhelfer:in</h4>
+                <p>Starte deine Karriere im Handwerk – ohne Vorkenntnisse möglich!</p>
+              </div>
+              <div class="stellen-card-back">
+                <p><strong>Mehr Infos</strong></p>
+                <p>Klick hier →</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </section>
+      
     <!-- Kontakt-->
     <section id="contact" class="dachdecker__section">
-        <h3>Kontakt</h3>
-        <p>Kontaktieren Sie uns für weitere Informationen und Angebote!</p>
-    </section>
+        <div class="dachdecker__container">
+        <div class="kontakt-container">
+          <h3>Schreib uns!</h3>
+          <form id="kontaktForm" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Dein Name">
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Deine E-Mail">
+            </div>
+            <div class="form-group">
+              <textarea id="nachricht" name="nachricht" required placeholder="Deine Nachricht..."></textarea>
+            </div>
+            <button type="submit" class="absenden-btn">Absenden</button>
+          </form>
+          <div id="feedback" class="feedback hidden">Danke für deine Nachricht!</div>
+        </div>
+      
+        <!-- Geschäftsführer-Bilder -->
+        <div class="geschaeftsfuehrer">
+          <div class="mitarbeiter">
+            <img src="assets/images/fallback.png" alt="Geschäftsführer 1">
+            <div class="info-overlay">
+              <h4>H. Bajraktari</h4>
+              <p>Tel: 0123 456789</p>
+              <p>Privat Email: h.bajraktari@mail.de</p>
+            </div>
+          </div>
+          <div class="mitarbeiter">
+            <img src="assets/images/fallback.png" alt="Geschäftsführer 2">
+            <div class="info-overlay">
+              <h4>B. Mazreku</h4>
+              <p>Tel: 0987 654321</p>
+              <p>Privat Email: b.mazreku@mail.de</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
 
     <!-- Impressum -->
     <section id="impressum" class="dachdecker__section">
+        <div class="dachdecker__container">
         <h3>Impressum</h3>
-        <p>Hier steht das Impressum...</p>
+        <p class="dachdecker__text">Hier steht das Impressum...</p>
+        </div>
     </section>
 
     <!--Datenschutzerklärung -->
     <section id="datenschutz" class="dachdecker__section">
-        <h3>Datenschutzerklärung</h3>
-        <p>Hier steht die Datenschutzerklärung...</p>
+        <div class="dachdecker__container">
+            <h3>Datenschutzerklärung</h3>
+            <p class="dachdecker__text">Hier steht die Datenschutzerklärung...</p>
+        </div>
     </section>
 </main>
 
