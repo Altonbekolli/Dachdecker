@@ -62,3 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+  document.getElementById("kontaktForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+  
+    const form = e.target;
+    const formData = new FormData(form);
+  
+    const response = await fetch("/send-mail.php", {
+      method: "POST",
+      body: formData
+    });
+  
+    if (response.ok) {
+      form.reset();
+      document.getElementById("feedback").classList.remove("hidden");
+    } else {
+      alert("Fehler beim Senden!");
+    }
+  });
+
+
+    
