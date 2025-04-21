@@ -4,6 +4,13 @@
     margin: 0;
     padding: 0;
 }
+.dachdecker__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
 
 /* --- Header --- */
 .dachdecker__header {
@@ -57,12 +64,11 @@
 /* --- Hauptinhalt --- */
 .dachdecker__main {
     padding-top: 80px;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
 .dachdecker__section {
     display: none;
+    padding:0 2rem;
 }
 
 .dachdecker__section--home {
@@ -95,7 +101,7 @@
     border-radius: 10px;
     z-index: 2;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Sanfter Schatten */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  
 }
 
 
@@ -205,7 +211,307 @@
     text-decoration: underline;
     color: red;
 }
+/*Home*/
+.dachdecker__welcome {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dachdecker__welcome h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .dachdecker__welcome p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .dachdecker__btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .dachdecker__btn:hover {
+    background-color: #4CAF50;
+  }
+  .leistungen-teaser {
+    background: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .leistungen-teaser h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .leistungen-subtext {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .leistungen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  .leistung-box {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
+  
+  .leistung-box:hover {
+    transform: scale(1.05);
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  /* Optional: leicht unterschiedliche Farben */
+  .leistung1 { background: #f0e6d2; }
+  .leistung2 { background: #ffcab0; }
+  .leistung3 { background: #d0e6c9; }
+  .leistung4 { background: #dbe9ff; }
+  .leistung5 { background: #ffd6e6; }
+  .leistung6 { background: #e0d6ff; }
+  
+  .leistung-box:hover.leistung1 { background: #d6a95e; }
+  .leistung-box:hover.leistung2 { background: #f26d3d; }
+  .leistung-box:hover.leistung3 { background: #68b86b; }
+  .leistung-box:hover.leistung4 { background: #4f91de; }
+  .leistung-box:hover.leistung5 { background: #de5a9d; }
+  .leistung-box:hover.leistung6 { background: #8a6cdd; }
+  
 
+/*Stellenausschreibungen*/
+.stellen-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .stellen-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #666;
+  }
+  
+  .stellen-grid-modern {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+  }
+  
+  .stellen-card {
+    background: transparent;
+    width: 280px;
+    height: 200px;
+    perspective: 1000px;
+    text-decoration: none;
+  }
+  
+  .stellen-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .stellen-card:hover .stellen-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .stellen-card-front, .stellen-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+  
+  .stellen-card-front {
+    color: #333;
+  }
+  
+  .stellen-card-back {
+    background-color: #222;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+
+/*Kontaktfeld*/
+#contact {
+    background-color: #1a1a1a;
+    padding: 4rem 0;
+}
+
+.kontakt-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  .kontakt-container h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color:#fff;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .absenden-btn {
+    background: #4CAF50;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .absenden-btn:hover {
+    background: #45a049;
+  }
+  
+  .feedback {
+    margin-top: 1rem;
+    color: #0f0;
+    font-weight: bold;
+    transition: opacity 0.5s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .geschaeftsfuehrer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .mitarbeiter {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .mitarbeiter img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 16px;
+  }
+  
+  .mitarbeiter:hover img {
+    transform: scale(1.05);
+    filter: brightness(70%);
+  }
+  
+  .info-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+  }
+  
+  .mitarbeiter:hover .info-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .info-overlay h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .info-overlay p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+  }
+  
+  
 /* --- Überschriften --- */
 h1 {
     font-size: 16px;
@@ -227,10 +533,13 @@ h3 {
     color: black;
     margin-bottom: 0;
     border-radius: 8px;
-}
+    text-align: center;
 
-.dachdecker__about-text {
+}
+.dachdecker__text{
+    text-align: center;
     color: #666;
+
 }
 
 /* --- Responsive Anpassungen --- */
