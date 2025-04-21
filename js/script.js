@@ -21,11 +21,6 @@ function slideCarousel() {
 
 setInterval(slideCarousel, 2000);
 
-
-
-window.addEventListener('scroll', revealBlocks);
-revealBlocks();
-
 function showSection(sectionId) {
     document.querySelectorAll('.dachdecker__section').forEach(section => {
         section.style.display = 'none';
@@ -56,5 +51,14 @@ document.querySelectorAll('.dachdecker__nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         const sectionId = item.getAttribute('href').substring(1);
+        showSection(sectionId); 
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const jahrSpan = document.getElementById("jahr");
+    if (jahrSpan) {
+      jahrSpan.textContent = new Date().getFullYear();
+    }
+  });
+  
